@@ -1,0 +1,10 @@
+<article class="activity" ...attributes>
+	{{#if @activity}}
+		<header class="activity-header">
+			<h2 class="activity-name">{{@activity.name}}</h2>
+			<p class="activity-description">{{@activity.description}}</p>
+		</header>
+		<Activity::Details @activity={{@activity}}/>
+	{{/if}}
+	{{yield}}
+</article>

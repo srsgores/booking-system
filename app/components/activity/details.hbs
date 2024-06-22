@@ -1,0 +1,22 @@
+<dl class="activity-details" ...attributes>
+	<div class="basic-details">
+		<dt>Name</dt>
+		<dd>{{@activity.name}}</dd>
+		<dt>Description</dt>
+		<dd>{{@activity.description}}</dd>
+	</div>
+	<div class="ticket-details-container">
+		<dt>Tickets</dt>
+		<dd>
+			<dl class="ticket-details">
+				{{#each @activity.tickets as |admissionType|}}
+					<dt>{{admissionType.name}}</dt>
+					<dd>
+						<span class="amount">{{admissionType.price.formatted}}</span> <span class="currency">{{admissionType.price.currency}}</span>
+					</dd>
+				{{/each}}
+			</dl>
+		</dd>
+	</div>
+	{{yield}}
+</dl>
