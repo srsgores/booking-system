@@ -1,1 +1,17 @@
+<form action="" method="POST" name="booking" {{on "submit" this.confirmBooking}}...attributes>
+	<fieldset>
+		<legend>Ticket Details</legend>
+		<div class="form-field">
+			<label for="name">Name</label>
+			<Input @type="text" id="name" @value={{this.user.name}} required={{true}}/>
+		</div>
+		<div class="form-field">
+			<label for="email">Email</label>
+			<Input @type="email" id="email" @value={{this.user.email}} required={{true}}/>
+		</div>
+	</fieldset>
+	<button type="submit" class="booking-form-submit" disabled={{this.formIsValid}}>
+		Buy {{this.ticketCount}} Ticket
+	</button>
+</form>
 {{yield}}
