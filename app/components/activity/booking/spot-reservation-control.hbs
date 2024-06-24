@@ -1,0 +1,15 @@
+<form action="" method="GET" {{on "change" this.updateTicketCount}}>
+	<fieldset>
+		<legend>Reserve Spots</legend>
+		<div class="form-field">
+			{{#each this.tripSpots as |spot index|}}
+				<div class="spot-control" data-is-available={{spot.isAvailable}}>
+					<label for="{{this.elementId}}-{{index}}-{{@trip.time}}-{{spot.count}}" title="Reserve {{spot.count}} Tickets">六</label>
+					<input type="radio" id="{{this.elementId}}-{{index}}-{{@trip.time}}-{{spot.count}}" name="spots" value={{spot.count}} required disabled={{spot.isUnavailable}} data-test-spot-control>
+				</div>
+			{{/each}}
+		</div>
+	</fieldset>
+	<button type="submit" disabled={{this.hasNoPendingTickets}} aria-live="polite">Reserve {{this.ticketCount}} Tickets</button>
+</form>
+{{yield}}

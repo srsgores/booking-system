@@ -2,6 +2,13 @@
 	<fieldset>
 		<legend>Ticket Details</legend>
 		<div class="form-field">
+			<label for="ticket-count">Number of Tickets</label>
+			<Input @type="number" id="ticket-count" @value={{this.ticketCount}} min="1" required={{true}}/>
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Personal Details</legend>
+		<div class="form-field">
 			<label for="name">Name</label>
 			<Input @type="text" id="name" @value={{this.user.name}} required={{true}}/>
 		</div>

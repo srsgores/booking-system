@@ -5,7 +5,7 @@
 			<p class="activity-description">{{@activity.description}}</p>
 		</header>
 		<Activity::Details @activity={{@activity}}/>
-		<Activity::Booking @activity={{@activity}}/>
+		<Activity::Availability @availabilityDates={{@availabilityDates}}/>
 	{{/if}}
 	{{yield}}
 </article>

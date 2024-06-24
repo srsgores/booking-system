@@ -1,0 +1,24 @@
+<div class="activity-availability" ...attributes>
+	<h3>Availabilities</h3>
+	<ol class="dates">
+		{{#each @availabilityDates as |date|}}
+			<li class={{date.status}}>
+				<dl class="date-meta">
+					<dt><time datetime={{date.date}}>{{date.date}}</time></dt>
+					<dd>
+						{{#each date.availabilityTimes as |trip|}}
+							<dl class={{trip.status}}>
+								<dt>Time</dt>
+								<dd><time>{{trip.time}}</time></dd>
+								<dt>Spots Left</dt>
+								<dd>{{trip.spotsLeft}}</dd>
+							</dl>
+							<Activity::Booking::SpotReservationControl @trip={{trip}}/>
+						{{/each}}
+					</dd>
+				</dl>
+			</li>
+		{{/each}}
+	</ol>
+	{{yield}}
+</div>

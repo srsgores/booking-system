@@ -1,5 +1,6 @@
 import Route from "@ember/routing/route";
 
+const MAX_CAPACITY = 10;
 /**
  * Use this file to get the data for the model for your route as if it's coming back from the server.
  *
@@ -63,17 +64,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 8,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 8,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 8,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			}
 		]
 	},
@@ -84,17 +88,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			}
 		]
 	},
@@ -105,17 +112,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 3,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 2,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 8,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			}
 		]
 	},
@@ -126,17 +136,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 1,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			}
 		]
 	},
@@ -147,17 +160,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 3,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 9,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 10,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			}
 		]
 	},
@@ -168,17 +184,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 0,
-				status: "SOLD_OUT"
+				status: "SOLD_OUT",
+				capacity: MAX_CAPACITY
 			}
 		]
 	},
@@ -189,17 +208,20 @@ export const availabilityDates = [
 			{
 				time: "8:00 AM",
 				spotsLeft: 6,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "12:00 PM",
 				spotsLeft: 2,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			},
 			{
 				time: "3:00 PM",
 				spotsLeft: 1,
-				status: "AVAILABLE"
+				status: "AVAILABLE",
+				capacity: MAX_CAPACITY
 			}
 		]
 	}
