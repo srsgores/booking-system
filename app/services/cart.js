@@ -1,14 +1,15 @@
 import Service from "@ember/service";
 import {tracked} from "@glimmer/tracking";
 import {dasherize} from "@ember/string";
+import deepMerge from "../utils/deep-merge";
 
 export default class CartService extends Service {
 	@tracked pendingTickets = {};
 	get ticketCount() {
-		return Object.values(this.pendingTickets).reduce((acc, activity) => {
-			return acc + Object.values(activity.reservedSpotsByDate).reduce((acc, time) => {
-				return acc + Object.values(time).reduce((acc, ticket) => {
-					return acc + ticket.ticketCount;
+		return Object.values(this.pendingTickets).reduce((total, activity) => {
+			return total + Object.values(activity.reservedSpotsByDate).reduce((total, date) => {
+				return total + Object.values(date).reduce((total, time) => {
+					return total + time.ticketCount;
 				}, 0);
 			}, 0);
 		}, 0);
@@ -30,9 +31,6 @@ export default class CartService extends Service {
 				}
 			}
 		};
-		this.pendingTickets = {
-			...ticket,
-			...this.pendingTickets
-		}
+		this.pendingTickets = deepMerge(this.pendingTickets, ticket);
 	}
 }
