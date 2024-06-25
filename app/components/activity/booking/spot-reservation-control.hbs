@@ -8,7 +8,9 @@
 					<input type="radio" id={{spot.id}} name="spots" value={{spot.count}} required disabled={{spot.isUnavailable}} data-test-spot-control>
 				</div>
 			{{/each}}
-			<output for="{{this.controlIds}}">{{this.ticketCount}} Tickets</output>
+			{{#if this.ticketCount}}
+				<output for="{{this.controlIds}}">{{this.ticketCount}} Tickets</output>
+			{{/if}}
 		</div>
 	</fieldset>
 	{{yield}}
