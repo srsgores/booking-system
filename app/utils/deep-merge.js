@@ -1,14 +1,20 @@
-export default function deepMerge(target, original) {
-	const isObject = obj => obj && typeof obj === "object";
-	if (!isObject(target) || !isObject(original)) {
-		return original;
+export default function deepMerge(target, source) {
+	const isObject = obj => obj && typeof obj === "object" && !Array.isArray(obj);
+
+	if (!isObject(target) || !isObject(source)) {
+		return source;
 	}
-	Object.keys({...target, ...original}).forEach(key => {
-		if (isObject(original[key]) && target[key]) {
-			target[key] = deepMerge(target[key], original[key]);
+
+	Object.keys(source).forEach(key => {
+		if (isObject(source[key])) {
+			if (!target[key] || !isObject(target[key])) {
+				target[key] = {};
+			}
+			target[key] = deepMerge(target[key], source[key]);
 		} else {
-			target[key] = original[key];
+			target[key] = source[key];
 		}
 	});
+
 	return target;
 }
