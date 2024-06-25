@@ -13,7 +13,7 @@
 								<dt>Spots Left</dt>
 								<dd>{{trip.spotsLeft}}</dd>
 							</dl>
-							<Activity::Booking::SpotReservationControl @trip={{trip}} @onAddTickets={{this.onAddTickets}}/>
+							<Activity::Booking::SpotReservationControl @trip={{trip}} @date={{date.date}} @onAddTickets={{this.onAddTickets}}/>
 						{{/each}}
 					</dd>
 				</dl>

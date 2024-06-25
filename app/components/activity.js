@@ -4,7 +4,7 @@ import {inject as service} from "@ember/service";
 export default class ActivityComponent extends Component {
 	@service cart;
 	@service store;
-	@action onAddTickets(trip, ticketCount) {
-		this.cart.addTickets(this.args.activity, trip, ticketCount);
+	@action onAddTickets(trip, ticketCount, date) {
+		this.cart.addTickets(this.args.activity, trip, ticketCount, date);
 	}
 }
