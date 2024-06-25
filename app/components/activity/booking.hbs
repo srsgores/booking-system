@@ -1,20 +1,40 @@
+<h2>Book {{this.cart.ticketCount}} Tickets</h2>
 <form action="" method="POST" name="booking" {{on "submit" this.confirmBooking}}...attributes>
 	<fieldset>
 		<legend>Ticket Details</legend>
-		<div class="form-field">
-			<label for="ticket-count">Number of Tickets</label>
-			<Input @type="number" id="ticket-count" @value={{this.ticketCount}} min="1" required={{true}}/>
-		</div>
+		{{#each-in this.cart.pendingTickets as |activityID reservation|}}
+			<fieldset>
+				<legend>{{reservation.activity.name}}</legend>
+				{{#each-in reservation.reservedSpotsByDate as |date times|}}
+					<fieldset>
+						<legend>
+							<time datetime={{date}}>{{date}}</time>
+						</legend>
+						{{#each-in times as |time booking|}}
+							<fieldset>
+								<legend>{{time}}</legend>
+								<output></output>
+								<Activity::SpotReservationControl @trip={{booking.trip}} @onAddTickets={{fn (this.updateCartTickets reservation.activity)}}/>
+							</fieldset>
+						{{/each-in}}
+					</fieldset>
+				{{/each-in}}
+			</fieldset>
+		{{/each-in}}
 	</fieldset>
 	<fieldset>
 		<legend>Personal Details</legend>
 		<div class="form-field">
 			<label for="name">Name</label>
-			<Input @type="text" id="name" @value={{this.user.name}} required={{true}}/>
+			<input type="text" id="name" value={{this.user.name}} required={{true}}/>
 		</div>
 		<div class="form-field">
 			<label for="email">Email</label>
-			<Input @type="email" id="email" @value={{this.user.email}} required={{true}}/>
+			<input type="email" id="email" value={{this.user.email}} required={{true}}/>
+		</div>
+		<div class="form-field">
+			<label for="phone">Phone</label>
+			<input type="tel" id="phone" value={{this.user.phone}} required={{true}}/>
 		</div>
 	</fieldset>
 	<button type="submit" class="booking-form-submit" disabled={{this.formIsValid}}>

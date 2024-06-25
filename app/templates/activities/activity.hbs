@@ -1,5 +1,13 @@
 {{page-title "Activity"}}
 
-<Activity @activity={{this.model.activity}} @availabilityDates={{this.model.availabilityDates}}/>
+<Activity @activity={{this.model.activity}} @availabilityDates={{this.model.availabilityDates}}>
+	{{#if this.cart.length}}
+		<footer>
+			<LinkTo @route="activities.activity.booking" aria-live="polite">
+				Book <strong>{{this.cart.ticketCount}}</strong> Tickets ️
+			</LinkTo>
+		</footer>
+	{{/if}}
+</Activity>
 
 {{outlet}}
