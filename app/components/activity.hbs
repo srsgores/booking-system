@@ -2,6 +2,7 @@
 	{{#if @activity}}
 		<header class="activity-header">
 			<h2 class="activity-name">{{@activity.name}}</h2>
+			<img src={{@activity.image}} width="1368" height="768" alt={{@activity.name}} loading="lazy" decoding="async">
 			<p class="activity-description">{{@activity.description}}</p>
 		</header>
 		<Activity::Details @activity={{@activity}}/>

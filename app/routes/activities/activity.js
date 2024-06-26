@@ -1,6 +1,27 @@
 import Route from "@ember/routing/route";
 
 const MAX_CAPACITY = 10;
+const DEFAULT_TICKET_PRICING = [
+	{
+		id: "ticket_1",
+		name: "Adult",
+		price: {
+			amount: "10.00",
+			currency: "USD",
+			formatted: "$10.00"
+		}
+	},
+	{
+		id: "ticket_2",
+		name: "Child",
+		price: {
+			amount: "5.00",
+			currency: "USD",
+			formatted: "$5.00"
+		}
+	}
+];
+
 /**
  * Use this file to get the data for the model for your route as if it's coming back from the server.
  *
@@ -21,28 +42,10 @@ const MAX_CAPACITY = 10;
 
 export const activity = {
 	id: "activity_1",
-	name: "Awesome Walking Tour",
-	description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-	tickets: [
-		{
-			id: "ticket_1",
-			name: "Adult",
-			price: {
-				amount: "10.00",
-				currency: "USD",
-				formatted: "$10.00"
-			}
-		},
-		{
-			id: "ticket_2",
-			name: "Child",
-			price: {
-				amount: "5.00",
-				currency: "USD",
-				formatted: "$5.00"
-			}
-		}
-	]
+	name: "Castle Falls Walking Tour",
+	description: "Embark on a breathtaking guided walking tour through the picturesque Beaver Falls, where you'll learn about the history of the historic Albertan town Pincher Creek.  Forage local soap berries, saskatoon berries, and oogle at the expansive view of Table Mountain",
+	image: "/assets/images/hiking-tour.jpg",
+	tickets: DEFAULT_TICKET_PRICING
 };
 
 /**
