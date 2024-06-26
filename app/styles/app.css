@@ -33,6 +33,7 @@ body {
 	.banner {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		gap: 1rem;
 	}
 	main {
@@ -44,8 +45,4 @@ body {
 		z-index: 1;
 		inset: 0;
 	}
-}
-
-.activities-container {
-	transition: 0.3s ease-in-out;
 }

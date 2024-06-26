@@ -2,11 +2,14 @@
 	--activity-title-minimum-font-size: 2.5em;
 	--activity-title-maximum-font-size: 3.5em;
 	--activity-title-font-weight: bold;
+	background-color: rgba(133, 133, 133, 0.16);
+	padding: 1rem 3rem;
 }
 
 .activity-name {
 	font-size: var(--step-2);
 	font-weight: var(--activity-title-font-weight);
+	margin-block-start: 0;
 }
 
 .activity-image {
