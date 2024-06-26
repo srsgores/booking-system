@@ -1,1 +1,26 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+:root {
+	--base-font-size: 100%;
+	--base-line-height: 1.5;
+	--base-spacing: 1.5rem;
+	--base-font-family: ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji"; /* Borrowed from https://tailwindcss.com/docs/font-family */
+
+	/* colours */
+	--amaranth: #e63946;
+	--peppermint: #a8dadc;
+	--aqua-island: #457b9d;
+	--wedgewood: #1d3557;
+	--cello: #0d1321;
+	--text-colour: #000;
+}
+
+body {
+	font-size: var(--base-font-size);
+	font-family: var(--base-font-family), sans-serif;
+	line-height: var(--base-line-height);
+	background: #e8e8e8;
+	margin: 0;
+	padding: 0;
+	color: var(--text-colour);
+}
