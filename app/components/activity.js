@@ -7,4 +7,8 @@ export default class ActivityComponent extends Component {
 	@action onAddTickets(trip, ticketCount, date) {
 		this.cart.addTickets(this.args.activity, trip, ticketCount, date);
 	}
+
+	@action onReset(activity, trip, date) {
+		this.cart.removePendingTickets(this.args.activity, trip, date);
+	}
 }

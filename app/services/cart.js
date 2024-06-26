@@ -17,6 +17,13 @@ export default class CartService extends Service {
 	clearPendingTickets() {
 		this.pendingTickets = {};
 	}
+
+	removePendingTickets(activity, trip, date) {
+		delete this.pendingTickets[activity.id].reservedSpotsByDate[date][dasherize(trip.time)];
+		if (!Object.keys(this.pendingTickets[activity.id].reservedSpotsByDate[date]).length) {
+			delete this.pendingTickets[activity.id].reservedSpotsByDate[date];
+		}
+	}
 	addTickets(activity, trip, ticketCount, date) {
 		const ticket = {
 			[activity.id]: {

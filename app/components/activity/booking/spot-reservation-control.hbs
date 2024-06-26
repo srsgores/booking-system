@@ -1,4 +1,4 @@
-<form action="" method="GET" {{on "change" this.onAddTickets}}>
+<form action="" method="GET" {{on "change" this.onAddTickets}} {{on "reset" this.onReset}}>
 	<fieldset>
 		<legend>Reserve Spots</legend>
 		<div class="form-field spot-control-container">
@@ -10,6 +10,7 @@
 			{{/each}}
 			{{#if this.ticketCount}}
 				<output for="{{this.controlIds}}">{{this.ticketCount}} Tickets</output>
+				<button class="Remove" type="reset">❌</button>
 			{{/if}}
 		</div>
 	</fieldset>

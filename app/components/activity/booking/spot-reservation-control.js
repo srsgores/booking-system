@@ -53,4 +53,9 @@ export default class ActivityBookingSpotReservationControlComponent extends Comp
 		this.ticketCount = parseInt(formChangeEvent.target.value);
 		this.args?.onAddTickets(this.args.trip, this.ticketCount, this.args.date);
 	}
+
+	@action onReset() {
+		this.args?.onReset(this.args.activity, this.args.trip, this.args.date);
+		this.ticketCount = 0;
+	}
 }

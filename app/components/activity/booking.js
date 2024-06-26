@@ -35,4 +35,8 @@ export default class ActivityBookingComponent extends Component {
 	@action updateCartTickets(activity, trip, ticketCount) {
 		this.cart.addTickets(this.args.activity, trip, ticketCount);
 	}
+
+	@action onReset(activity, trip, date) {
+		this.cart.removePendingTickets(activity, trip, date);
+	}
 }
