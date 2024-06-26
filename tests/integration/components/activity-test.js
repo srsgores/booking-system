@@ -11,7 +11,7 @@ const SELECTORS = {
 			DESCRIPTION: ".activity-description"
 		}
 	}
-}
+};
 module("Integration | Component | activity", function (hooks) {
 	setupRenderingTest(hooks);
 
