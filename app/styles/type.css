@@ -8,3 +8,8 @@
 	--step-4: clamp(3.552rem, 3.0494rem + 2.513vi, 4.997rem);
 	--step-5: clamp(4.7348rem, 3.9241rem + 4.0538vi, 7.0657rem);
 }
+
+a[href] {
+	text-wrap: balance;
+	text-underline-offset: 0.2em;
+}

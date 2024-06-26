@@ -24,3 +24,28 @@ body {
 	padding: 0;
 	color: var(--text-colour);
 }
+
+.banner {
+	padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 55em) {
+	.banner {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+	main {
+		display: flex;
+		gap: 1rem;
+	}
+	.activities {
+		position: sticky;
+		z-index: 1;
+		inset: 0;
+	}
+}
+
+.activities-container {
+	transition: 0.3s ease-in-out;
+}

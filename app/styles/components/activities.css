@@ -1,5 +1,20 @@
-.activities-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+.activities {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.activities-container {
+	background: rgb(205 205 205 / 37%);
+}
+
+.activity-link {
+	font-size: var(--step-0);
+	text-wrap: balance;
+	padding: 1.2em 1em;
+	display: block;
+}
+
+.activity-link.active {
+	font-weight: bold;
 }

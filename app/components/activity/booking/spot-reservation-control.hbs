@@ -4,7 +4,7 @@
 		<div class="form-field">
 			{{#each this.tripSpots as |spot|}}
 				<div class="spot-control" data-is-available={{spot.isAvailable}}>
-					<label for={{spot.id}} title="Reserve {{spot.count}} Tickets">六</label>
+					<label for={{spot.id}} title="Reserve {{spot.count}} Tickets">🧑</label>
 					<input type="radio" id={{spot.id}} name="spots" value={{spot.count}} required disabled={{spot.isUnavailable}} data-test-spot-control>
 				</div>
 			{{/each}}

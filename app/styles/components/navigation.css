@@ -1,0 +1,24 @@
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	background-color: rgb(74 74 74 / 58%);
+}
+
+.nav-items {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-item-link {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.5em 1em;
+}
+
+.nav-item-link.active {
+	font-weight: bold;
+}

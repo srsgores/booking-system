@@ -1,17 +1,20 @@
 {{page-title "Activities"}}
 
-{{#if this.model.length}}
-	<ul>
-		{{#each this.model as |activity|}}
-			<li>
-				<LinkTo @route="activities.activity" @model={{activity.id}}>
-					{{activity.name}}
-				</LinkTo>
-			</li>
-		{{/each}}
-	</ul>
-{{else}}
-	<p>No activities found.</p>
-{{/if}}
+<div class="activities-container">
+	{{#if this.model.length}}
+		<ul class="activities">
+			{{#each this.model as |activity|}}
+				<li class="activity-link-container">
+					<LinkTo @route="activities.activity" @model={{activity.id}} class="activity-link">
+						{{activity.name}}
+					</LinkTo>
+				</li>
+			{{/each}}
+		</ul>
+	{{else}}
+		<p>No activities found.</p>
+	{{/if}}
+</div>
+
 
 {{outlet}}

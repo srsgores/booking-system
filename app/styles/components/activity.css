@@ -13,3 +13,28 @@
 	width: 100%;
 	height: auto;
 }
+
+@media screen and (width >= 55rem) {
+	.activity-actions {
+		position: fixed;
+		z-index: 1;
+		inset-block-end: 1rem;
+		inset-inline-end: 1rem;
+	}
+}
+
+.activity-actions {
+	padding: 1rem 2rem;
+}
+
+.activity-action-link {
+	white-space: nowrap;
+	color: #fff;
+	font-size: 1.4em;
+	border: 0.1em solid hsl(0deg 54% 15% / 50%);
+	background-color: hsl(0deg 48% 38% / 87%);
+	border-radius: 1em;
+	padding: 0.5em 1em;
+	aspect-ratio: 1;
+	text-underline-offset: 0.4em;
+}

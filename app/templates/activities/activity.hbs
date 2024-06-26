@@ -2,9 +2,9 @@
 
 <Activity @activity={{this.model.activity}} @availabilityDates={{this.model.availabilityDates}}>
 	{{#if this.cart.ticketCount}}
-		<footer>
-			<LinkTo @route="activities.activity.booking" aria-live="polite">
-				Book <strong>{{this.cart.ticketCount}}</strong> Tickets ️
+		<footer class="activity-actions overlay">
+			<LinkTo @route="activities.activity.booking" aria-live="polite" class="activity-action-link">
+				Book <strong>{{this.cart.ticketCount}}</strong> Tickets ➡️
 			</LinkTo>
 		</footer>
 	{{/if}}
