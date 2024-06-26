@@ -5,7 +5,7 @@
 			{{#each this.tripSpots as |spot|}}
 				<div class="spot-control" data-is-unavailable={{spot.isUnavailable}}>
 					<label for={{spot.id}} title="Reserve {{spot.count}} Tickets">🧑</label>
-					<input class="sr-only" type="radio" id={{spot.id}} name="spots" value={{spot.count}} required disabled={{spot.isUnavailable}} data-test-spot-control>
+					<input class="sr-only" type="radio" id={{spot.id}} name="spots" checked={{spot.checked}} value={{spot.count}} required disabled={{spot.isUnavailable}} data-test-spot-control>
 				</div>
 			{{/each}}
 			{{#if this.ticketCount}}

@@ -7,6 +7,13 @@ import {dasherize} from "@ember/string";
 export default class ActivityBookingSpotReservationControlComponent extends Component {
 	elementId = guidFor(this);
 	@tracked ticketCount = 0;
+
+	constructor() {
+		super(...arguments);
+		if (this.args.selectedTicketCount) {
+			this.ticketCount = this.args.selectedTicketCount;
+		}
+	}
 	/**
 	 * @returns Array<Spot> the spots available for the trip
 	 */
@@ -17,6 +24,7 @@ export default class ActivityBookingSpotReservationControlComponent extends Comp
 			return {
 				id,
 				count,
+				checked: this.ticketCount === count,
 				isUnavailable: count > this.args.trip.spotsLeft
 			};
 		});

@@ -14,7 +14,7 @@
 							<fieldset>
 								<legend>{{time}}</legend>
 								<output></output>
-								<Activity::Booking::SpotReservationControl @trip={{booking.trip}} @date={{date}} @onAddTickets={{this.updateCartTickets}}/>
+								<Activity::Booking::SpotReservationControl @trip={{booking.trip}} @date={{date}} @onAddTickets={{this.updateCartTickets}} @selectedTicketCount={{booking.ticketCount}}/>
 							</fieldset>
 						{{/each-in}}
 					</fieldset>
