@@ -9,7 +9,7 @@ const SELECTORS = {
 		NAME: ".activity-name",
 		DESCRIPTION: ".activity-description"
 	}
-}
+};
 module("Integration | Component | activity/details", function (hooks) {
 	setupRenderingTest(hooks);
 
