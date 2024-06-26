@@ -40,7 +40,7 @@ body {
 		display: flex;
 		gap: 1rem;
 	}
-	.activities {
+	.activities, [name="booking"] {
 		position: sticky;
 		z-index: 1;
 		inset: 0;
