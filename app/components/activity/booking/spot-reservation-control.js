@@ -25,6 +25,7 @@ export default class ActivityBookingSpotReservationControlComponent extends Comp
 				id,
 				count,
 				checked: this.ticketCount === count,
+				hasCheckedAfter: count < this.ticketCount,
 				isUnavailable: count > this.args.trip.spotsLeft
 			};
 		});

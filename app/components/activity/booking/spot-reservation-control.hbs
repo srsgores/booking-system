@@ -3,7 +3,7 @@
 		<legend>Reserve Spots</legend>
 		<div class="form-field spot-control-container">
 			{{#each this.tripSpots as |spot|}}
-				<div class="spot-control" data-is-unavailable={{spot.isUnavailable}}>
+				<div class="spot-control" data-is-unavailable={{spot.isUnavailable}} data-has-checked-after={{spot.hasCheckedAfter}}>
 					<label for={{spot.id}} title="Reserve {{spot.count}} Tickets">🧑</label>
 					<input class="sr-only" type="radio" id={{spot.id}} name="spots" checked={{spot.checked}} value={{spot.count}} required disabled={{spot.isUnavailable}} data-test-spot-control>
 				</div>

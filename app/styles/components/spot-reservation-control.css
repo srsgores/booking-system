@@ -27,7 +27,7 @@
 .spot-control:not([data-is-unavailable]):hover,
 .spot-control:not([data-is-unavailable]):has(~ .spot-control:not([data-is-unavailable]):hover),
 .spot-control:not([data-is-unavailable]):has(:checked),
-.spot-control:not([data-is-unavailable]):has(* ~ :checked) {
+.spot-control[data-has-checked-after]:not([data-is-unavailable]) {
 	transform: scale(1.3);
 	filter: none;
 }
