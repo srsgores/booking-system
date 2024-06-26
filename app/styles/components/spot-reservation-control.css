@@ -1,0 +1,33 @@
+.spot-control-container {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.spot-control {
+	filter: brightness(0.8);
+}
+
+.spot-control[data-is-unavailable] label {
+	cursor: not-allowed;
+}
+
+.spot-control[data-is-unavailable] {
+	filter: grayscale(100%) opacity(50%);
+}
+
+.spot-control:not([data-is-unavailable]) label {
+	display: block;
+	cursor: pointer;
+}
+
+.spot-control:not([data-is-unavailable]) {
+	transition: transform 0.2s ease-in-out;
+}
+
+.spot-control:not([data-is-unavailable]):hover,
+.spot-control:not([data-is-unavailable]):has(~ .spot-control:not([data-is-unavailable]):hover),
+.spot-control:not([data-is-unavailable]):has(:checked),
+.spot-control:not([data-is-unavailable]):has(* ~ :checked) {
+	transform: scale(1.3);
+	filter: none;
+}
